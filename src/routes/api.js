@@ -8,6 +8,7 @@ const router = express.Router();
 
 // Public routes (no authentication required)
 router.post("/auth/login", authController.login);
+router.post("/auth/register", authController.register);
 router.get("/health", (req, res) => res.json({ ok: true, workerRunning: workerController.isWorkerRunning() }));
 
 // Protected routes (authentication required)
